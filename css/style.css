@@ -1,1 +1,94 @@
+body {
+  background-color: #3498db;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
 
+}
+
+@keyframes grow {
+  100% {
+      -webkit-clip-path: circle(100%);
+      clip-path: circle(100%);
+  }
+}
+
+.loadbar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-51%, -50%);
+}
+
+progress[value] {
+  width: 110%;
+  height: 5px;
+  -webkit-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #3498db;
+}
+
+progress[value]::-webkit-progress-value {
+  transition: width 0.5s;
+}
+
+progress::-webkit-progress-value {
+  background: black;
+}
+
+.line {
+  width: 0px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c0c0c0;
+  z-index: 500;
+}
+
+.text1 {
+  color: white;
+  margin-left: 150px;
+  margin-top: -1px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+}
+
+.text2 {
+  color: white;
+  margin-left: 200px;
+  margin-top: -76px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.circle {
+  border-radius: 100%;
+  height: 0px;
+  width: 0px;
+  z-index: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: none;
+}
+
+#black {
+  background-color: black;
+  height: 1080px;
+  width: 1920px;
+  z-index: 7;
+}
